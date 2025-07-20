@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Announcement System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .success {
+      color: green;
+      margin-top: 1rem;
+    }
+    .error {
+      color: red;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Subscribe for Event Notifications</h2>
+    <form id="subscribe-form">
+      <label>Email:
+        <input type="email" id="email" required />
+      </label>
+      <button type="submit">Subscribe</button>
+      <div id="subscribe-msg"></div>
+    </form>
 
+    <hr />
+
+    <h2>Create New Event</h2>
+    <form id="event-form">
+      <label>Title:
+        <input type="text" id="title" required />
+      </label>
+      <label>Date:
+        <input type="date" id="date" required />
+      </label>
+      <label>Description:
+        <textarea id="description" required></textarea>
+      </label>
+      <button type="submit">Create Event</button>
+      <div id="event-msg"></div>
+    </form>
+  </div>
+
+  <script>
+    const SUBSCRIBE_API = 'https://your-api-id.execute-api.region.amazonaws.com/prod/subscribe';
+    const CREATE_EVENT_API = 'https://your-api-id.execute-api.region.amazonaws.com/prod/create-event';
+
+    const subscribeForm = document.getElementById('subscribe-form');
+    const eventForm = document.getElementById('event-form');
+    const subscribeMsg = document.getElementById('subscribe-msg');
+    const eventMsg = document.getElementById('event-msg');
+
+    subscribeForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      subscribeMsg.textContent = '';
+      const email = document.getElementById('email').value;
+
+      try {
+        const res = await fetch(SUBSCRIBE_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        await res.json();
+        subscribeMsg.textContent = '✅ Subscription successful!';
+        subscribeMsg.className = 'success';
+        subscribeForm.reset();
+      } catch (err) {
+        subscribeMsg.textContent = '❌ Subscription failed.';
+        subscribeMsg.className = 'error';
+      }
+    });
+
+    eventForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      eventMsg.textContent = '';
+      const title = document.getElementById('title').value;
+      const date = document.getElementById('date').value;
+      const description = document.getElementById('description').value;
+
+      try {
+        const res = await fetch(CREATE_EVENT_API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ title, date, description })
+        });
+        await res.json();
+        eventMsg.textContent = '✅ Event created!';
+        eventMsg.className = 'success';
+        eventForm.reset();
+      } catch (err) {
+        eventMsg.textContent = '❌ Event creation failed.';
+        eventMsg.className = 'error';
+      }
+    });
+  </script>
+</body>
+</html>
