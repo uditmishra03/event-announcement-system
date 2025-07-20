@@ -1,5 +1,7 @@
 ![AWS](https://img.shields.io/badge/AWS-SNS%20%7C%20Lambda%20%7C%20API%20Gateway-orange)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Notion Docs](https://img.shields.io/badge/📝%20Docs-Notion-000000?logo=notion&logoColor=white)](https://graceful-cupcake-08c.notion.site/AWS-Event-Announcement-System-236bdf85cfdf8091bbebcb81ad1a7b4e?source=copy_link)
+
 ---
 # 📣 AWS Event Announcement System
 
