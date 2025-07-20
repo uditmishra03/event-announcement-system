@@ -1,12 +1,14 @@
+![AWS](https://img.shields.io/badge/AWS-SNS%20%7C%20Lambda%20%7C%20API%20Gateway-orange)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+---
 # 📣 AWS Event Announcement System
 
 A fully serverless event broadcasting system built using AWS services. Users can subscribe to email notifications for events, and admins can trigger new announcements — all in real-time.
-
+> **TL;DR**: A serverless AWS-powered app where users can subscribe to email alerts for upcoming events. Admins can trigger announcements that go out in real time to all subscribers.
 ---
 ## 📌 AWS Event Announcement System – Project Summary
 
 ---
-
 ### 💡 What It Does
 
 - A serverless application that enables:
@@ -148,17 +150,42 @@ README.md
 
 ## 📸 Snapshots
 
-| Feature | Screenshot |
-|--------|------------|
-| S3 Hosted Frontend | <img width="1646" height="891" alt="image" src="https://github.com/user-attachments/assets/ed6cbfc5-48d4-4354-aee2-86c8a39e0dc1" /> |
-| API Gateway Test   | <img width="1264" height="364" alt="image" src="https://github.com/user-attachments/assets/4169d4ff-39f8-4a81-bd10-28ea65205ce8" /> |
-|                    | <img width="1219" height="382" alt="image" src="https://github.com/user-attachments/assets/a27faee7-7217-48cd-a850-98c100fb22ac" /> |
-| SNS Subscription   | <img width="1231" height="613" alt="image" src="https://github.com/user-attachments/assets/4f5653c7-4424-4745-97be-e0d552f41f33" /> |
-| Email Notification | <img width="902" height="286" alt="image" src="https://github.com/user-attachments/assets/b684e4e9-9a55-413d-81a8-674b2e9fc794" />  |
-| Event Notification | <img width="682" height="618" alt="image" src="https://github.com/user-attachments/assets/a05a8d82-9644-4ba2-9a7f-54bb52928b56" />  |
-|                    |<img width="1203" height="387" alt="image" src="https://github.com/user-attachments/assets/e258db2e-b1a8-4610-bf88-2e7c939ddbb0" />  |
+<details>
+<summary>🎯 S3 Hosted Frontend</summary>
 
+<img width="1646" height="891" alt="image" src="https://github.com/user-attachments/assets/ed6cbfc5-48d4-4354-aee2-86c8a39e0dc1" />
 
+</details>
+
+<details>
+<summary>🚀 API Gateway Test</summary>
+
+<img width="1264" height="364" alt="image" src="https://github.com/user-attachments/assets/4169d4ff-39f8-4a81-bd10-28ea65205ce8" />
+<img width="1219" height="382" alt="image" src="https://github.com/user-attachments/assets/a27faee7-7217-48cd-a850-98c100fb22ac" />
+
+</details>
+
+<details>
+<summary>📬 SNS Subscription</summary>
+
+<img width="1231" height="613" alt="image" src="https://github.com/user-attachments/assets/4f5653c7-4424-4745-97be-e0d552f41f33" />
+
+</details>
+
+<details>
+<summary>✉️ Email Notification</summary>
+
+<img width="902" height="286" alt="image" src="https://github.com/user-attachments/assets/b684e4e9-9a55-413d-81a8-674b2e9fc794" />
+
+</details>
+
+<details>
+<summary>📢 Event Notification</summary>
+
+<img width="682" height="618" alt="image" src="https://github.com/user-attachments/assets/a05a8d82-9644-4ba2-9a7f-54bb52928b56" />
+<img width="1203" height="387" alt="image" src="https://github.com/user-attachments/assets/e258db2e-b1a8-4610-bf88-2e7c939ddbb0" />
+
+</details>
 
 ---
 
@@ -188,3 +215,28 @@ README.md
 }
 ```
 ---
+## 📄 License
+MIT License
+```
+MIT License
+
+Copyright (c) 2025 Udit Mishra
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell     
+copies of the Software, and to permit persons to whom the Software is         
+furnished to do so, subject to the following conditions:                      
+
+The above copyright notice and this permission notice shall be included in    
+all copies or substantial portions of the Software.                           
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR    
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,      
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE   
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER        
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN     
+THE SOFTWARE.
+```
