@@ -77,9 +77,8 @@ A fully serverless event broadcasting system built using AWS services. Users can
 
 ## 🧱 Architecture
 
-<img width="948" height="427" alt="image" src="https://github.com/user-attachments/assets/670ef6ec-13a3-41cc-b868-99ee122a64cd" />
-<img width="716" height="447" alt="image" src="https://github.com/user-attachments/assets/ff03cc66-48a3-48fa-a83a-dc0ca19d2c99" />
-
+<img width="701" height="441" alt="Screenshot 2025-07-24 122412" src="https://github.com/user-attachments/assets/0c56256a-abd7-4c61-bf9c-2b4300f42d84" />
+<img width="747" height="333" alt="Screenshot 2025-07-24 122451" src="https://github.com/user-attachments/assets/4748e288-f98c-49b8-ae6b-776dbcca00fd" />
 
 ---
 
